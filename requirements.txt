@@ -1,0 +1,6 @@
+typer
+rich
+pydantic
+loguru
+python-dateutil
+pytest

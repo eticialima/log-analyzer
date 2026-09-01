@@ -1,0 +1,28 @@
+[project]
+name = "log-analyzer"
+version = "0.1.0"
+description = "Small CLI log analyzer using Typer, Rich, Pydantic and Loguru"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "loguru>=0.7",
+    "pydantic>=2.7",
+    "python-dateutil>=2.9",
+    "rich>=13.7",
+    "typer>=0.12",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.scripts]
+log-analyzer = "log_analyzer.main:app"
+
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
